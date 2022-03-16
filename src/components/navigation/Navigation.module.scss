@@ -1,0 +1,230 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.navigationPage {
+  @include flex(row, center, center, nowrap);
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+    .circle3 {
+      @include flex(row, center, center, nowrap);
+      @include circle(320px, 320px);
+      position: relative;
+      animation: rotateRight 20s linear infinite;
+
+      @media screen and (min-width: $breakpointMD){
+        @include circle(580px, 580px);
+      }
+
+      &:after {
+        @include circle(20px, 20px);
+        content: "";
+        position: absolute;
+        left: 35px;
+        top: 35px;
+        z-index: -2;
+        background: #009e66;
+
+        @media screen and (min-width: $breakpointMD){
+          left: 74px;
+          top: 74px;
+        }
+      }
+
+      .circle2 {
+        @include flex(row, center, center, nowrap);
+        @include circle(230px, 230px);
+        position: relative;
+        animation: rotateLeft 20s linear infinite;
+
+        @media screen and (min-width: $breakpointMD){
+          @include circle(380px, 380px);
+        }
+
+        .link {
+          @include circle(80px,80px);
+          @include text(16px, 600, 0.3px);
+          position: absolute;
+          z-index: 100;
+          text-decoration: none;
+          padding-top: 15px;
+          background: $slate;
+          color: black;
+          text-align: center;
+          line-height: 45px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            border: 2px solid $accentColor;
+            border-radius: 50%;
+          }
+
+          &:hover::after {
+            left: -20%;
+            top: -20%;
+            width: 110px;
+            height: 110px;
+            border: 4px dashed $accentColor;
+            animation: rotateLeft 10s linear infinite;
+          }
+        }
+
+        .link:nth-child(1) {
+          left: 170px;
+          top: -20px;
+
+          @media screen and (min-width: $breakpointMD){
+            left: 240px;
+            top: -10px;
+          }
+        }
+        .link:nth-child(2) {
+          left: 180px;
+          top: 160px;
+
+          @media screen and (min-width: $breakpointMD){
+            left: 420px;
+            top: 260px;
+          }
+        }
+        .link:nth-child(3) {
+          left: -35px;
+          top: 160px;
+
+          @media screen and (min-width: $breakpointMD){
+            left: -35px;
+            top: 220px;
+          }
+        }
+        .link:nth-child(4) {
+          left: 5px;
+          top: -60px;
+
+          @media screen and (min-width: $breakpointMD){
+            left: -55px;
+            top: -60px;
+          }
+        }
+
+        .dopCircle {
+          @include circle(230px, 230px);
+          @include flex(row, center, center, nowrap);
+          position: relative;
+          border: none;
+          animation: rotateLeft 10s linear infinite;
+          @media screen and (min-width: $breakpointMD){
+            @include circle(380px, 380px);
+          }
+
+          &:after {
+            @include circle(20px, 20px);
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 24px;
+            z-index: -2;
+            background: #ccd6f6;
+            @media screen and (min-width: $breakpointMD){
+              left: 45px;
+              top: 45px;
+            }
+          }
+
+
+          .circle1 {
+            @include flex(row, center, center, nowrap);
+            @include circle(140px, 140px);
+            animation: rotateRight 4s linear infinite;
+
+            @media screen and (min-width: $breakpointMD){
+              @include circle(200px, 200px);
+            }
+
+            &:after {
+              @include circle(20px, 20px);
+              content: "";
+              position: absolute;
+              left: 10px;
+              top: 10px;
+              z-index: -2;
+              background: #009e66;
+
+              @media screen and (min-width: $breakpointMD){
+                left: 20px;
+                top: 20px;
+              }
+            }
+
+            .circleCenter {
+              @include circle(80px, 80px);
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  .icon {
+    @include flex(row, center, center, nowrap);
+    position: absolute;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      transition: all 0.25s ease;
+      border-radius: 40px;
+    }
+
+    &::before {
+      transition-duration: 0.5s;
+      box-shadow: inset 0 0 0 1px $accentColor;
+    }
+    &:hover::before{
+      box-shadow: inset 0 0 0 80px $accentColor;
+    }
+    a {
+      text-decoration: none;
+      color: $color;
+    }
+  }
+}
+

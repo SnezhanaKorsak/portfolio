@@ -1,0 +1,58 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.container {
+  width: 40px;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  left: auto;
+  color: $slate;
+
+  @media screen and (max-width: $breakpointSM) {
+    top: 0;
+    left: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: $slate;
+    @media screen and (max-width: $breakpointSM) {
+      position: absolute;
+      right: -280px;
+      top: 30px;
+      width: 80px;
+      height: 1px;
+      display: inline-block;
+    }
+  }
+
+  a {
+    @include text(14px, 600, 0.1px);
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    margin: 10px auto;
+    padding: 10px;
+    line-height: 18px;
+    writing-mode: vertical-rl;
+    color: $slate;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    @media screen and (max-width: $breakpointSM) {
+      writing-mode: horizontal-tb;
+      margin: 10px auto;
+    }
+
+    &:hover, &:focus {
+      transform: translateY(-4px);
+      color: $accentColor;
+    }
+  }
+
+}
