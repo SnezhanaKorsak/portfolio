@@ -19,7 +19,7 @@ export const Navigation = () => {
                     <NavLink to={RoutePath.projects} className={style.link}>Projects</NavLink>
                     <NavLink to={RoutePath.skills} className={style.link}>Skills</NavLink>
                     <NavLink to={RoutePath.contacts} className={style.link}>Contacts</NavLink>
-                    <NavLink to={RoutePath.about} className={style.link}>About</NavLink>
+                    <NavLink to={"/about/me"} className={style.link}>About</NavLink>
 
                     <div className={style.dopCircle}>
                         <div className={style.circle1}>

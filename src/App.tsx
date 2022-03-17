@@ -18,13 +18,13 @@ function App() {
                 <Route path="/" element={<StartPage/>}/>
                 <Route path={RoutePath.navigation} element={<Navigation/>}/>
 
-                <Route path={RoutePath.about} element={<Profile/>}/>
+                <Route path={RoutePath.about + "/*"} element={<Profile/>}/>
                 <Route path={RoutePath.skills} element={<Skills/>}/>
                 <Route path={RoutePath.projects} element={<Projects/>}/>
                 <Route path={RoutePath.contacts} element={<Contacts/>}/>
 
-                <Route path={RoutePath.notFound} element={<NotFoundPage/>}/>
-                <Route path="*" element={<Navigate to={RoutePath.notFound}/>}/>
+                {/*<Route path={RoutePath.notFound} element={<NotFoundPage/>}/>
+                <Route path="*" element={<Navigate to={RoutePath.notFound}/>}/>*/}
             </Routes>
 
         </div>

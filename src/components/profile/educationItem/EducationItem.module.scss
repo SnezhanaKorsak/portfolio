@@ -1,0 +1,45 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+
+.educationContent {
+  .title {
+    @include text(20px, 600, normal);
+    position: relative;
+    color: $accentColor;
+
+    .linkIcon {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      color: $accentColor;
+      cursor: pointer;
+    }
+  }
+
+  .description {
+    @include text(14px, 400, normal);
+    margin-top: 10px;
+    color: $secondaryColor;
+
+    & > ul {
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 5px;
+
+        &::before {
+          content: "▹";
+          position: absolute;
+          left: 0;
+          color: $secondaryColor;
+
+        }
+      }
+
+
+    }
+  }
+}

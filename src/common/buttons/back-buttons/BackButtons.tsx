@@ -10,7 +10,7 @@ export const BackButtons = () => {
     return (
         <div className={style.icon}>
             <NavLink to={RoutePath.navigation}>
-                <FontAwesomeIcon icon={faSignOutAlt} size="2x"/>
+                <FontAwesomeIcon icon={faSignOutAlt} size="lg"/>
             </NavLink>
         </div>
     );
