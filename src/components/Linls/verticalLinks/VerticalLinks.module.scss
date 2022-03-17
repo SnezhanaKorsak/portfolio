@@ -10,7 +10,7 @@
   color: $slate;
   @media screen and (max-width: $breakpointSM) {
     bottom: 0;
-    left: 250px;
+    left: 230px;
   }
 
   &::after {
@@ -54,6 +54,7 @@
         &:hover, &:focus {
           transform: translateY(-4px);
           color: $accentColor;
+          fill: $accentColor;
         }
       }
 
@@ -65,6 +66,11 @@
       svg.feather {
         fill: none;
       }
+        svg[class~="telegram"] path:hover {
+          fill: $accentColor;
+
+      }
+
     }
 
   }

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ReactTypingEffect from 'react-typing-effect';
-import {ParticlesBackground} from "../../common/ParticlesBackground";
+import {ParticlesBackground} from "../../common/components/ParticlesBackground";
 import style from "./StartPage.module.scss";
 import {NavLink} from "react-router-dom";
 import {RoutePath} from "../../utils/route-path";

@@ -1,0 +1,17 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.subtitle {
+  @include text(26px, 700, 1px);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.contentDescription {
+  @include text(14px, 400, 1px);
+  margin-bottom: 5px;
+  line-height: 27px;
+  outline-offset: 50px;
+  color: $secondaryColor;
+
+}

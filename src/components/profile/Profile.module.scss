@@ -1,0 +1,22 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.profileBlock {
+
+  .container {
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 5px 20px;
+    @media (max-width: $breakpointSM) {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .btnBack {
+      position: fixed;
+      bottom: 75px;
+      right: 75px;
+    }
+  }
+}
