@@ -1,7 +1,8 @@
 
-export const educationData: DataItem[] = [
+export const educationData: EducationDataItem[] = [
     {
-        id: 1, date: "2008-2013",
+        id: 1,
+        date: "2008-2013",
         school: "Polotsk State University",
         education: "Construction Engineer",
         socialLink: "https://www.psu.by/en/",
@@ -11,7 +12,8 @@ export const educationData: DataItem[] = [
         ]
     },
     {
-        id: 2, date: "04-08.2021",
+        id: 2,
+        date: "04-08.2021",
         school: "Self-education",
         education: "JavaScript, HTML",
         socialLink: "https://www.codewars.com/users/Snezhana%20Korsak",
@@ -22,7 +24,8 @@ export const educationData: DataItem[] = [
         ]
     },
     {
-        id: 3, date: "08-12.2021",
+        id: 3,
+        date: "08-12.2021",
         school: "IT-INCUBATOR",
         education: "Frontend Developer/React",
         socialLink: "https://it-incubator.by",
@@ -39,7 +42,8 @@ export const educationData: DataItem[] = [
         ]
     },
     {
-        id: 4, date: "11-12.2021",
+        id: 4,
+        date: "11-12.2021",
         school: "REDEV EDUCATION",
         education: " JavaScript React/React ",
         socialLink: "https://www.instagram.com/redev_courses/?hl=ru",
@@ -49,7 +53,8 @@ export const educationData: DataItem[] = [
         ]
     },
     {
-        id: 5, date: "01-03.2022",
+        id: 5,
+        date: "01-03.2022",
         school: "iTechArt/Students Lab",
         education: "Internship",
         socialLink: "https://www.itechart.by/students-lab/",
@@ -68,22 +73,42 @@ export const educationData: DataItem[] = [
     },
 ]
 
-export const worksData: DataItem[] = [
+export const worksData: WorkDataItem[] = [
     {
-        id: 1, date: "2008-2013",
-        school: "Polotsk State University",
-        education: "Construction Engineer",
-        socialLink: "https://www.psu.by/en/",
+        id: 1,
+        date: "2013-2021",
+        company: "construction sphere",
+        specialization: "Construction Engineer",
+        socialLink: "https://kjproject.by",
         description: [
-            "specialty -industrial and civil engineering",
-            "department - building structures"
+            "Worked for 5 different companies in construction field and took part in the development of\n" +
+            "industrial and civil construction projects.",
+            "Main responsibilities were:",
+            "development of design documentation;",
+            "understanding and reading of design documentation;",
+            "knowledge of specialized software;",
+            "ability to use regulatory documentation"
         ]
     },
     {
-        id: 3, date: "01-03.2022",
-        school: "iTechArt/Students Lab",
-        education: "Internship",
-        socialLink: "https://www.itechart.by/students-lab/",
+        id: 2,
+        date: "2021- Present",
+        company: "Freelance",
+        specialization: "Frontend Developer",
+        socialLink: "https://www.linkedin.com/in/snezhana-korsak/",
+        description: [
+            "creating apps using React and TypeScript, Redux state management and using REST API",
+            "refactoring, bug fixing, registration and loginform creation",
+            "work with Hooks",
+            "reusable components development"
+        ]
+    },
+    {
+        id: 3,
+        date: "January- March 2022",
+        company: "iTechArt",
+        specialization: "Internship",
+        socialLink: "https://www.itechart.by/",
         description: [
             "creating a website with a weather forecast",
             "this project has implemented:",
@@ -102,11 +127,20 @@ export const worksData: DataItem[] = [
 
 //types
 
-export type DataItem = {
+export type EducationDataItem = {
     id: number;
     date: string;
     school: string;
     education: string;
+    socialLink: string;
+    description: string[]
+}
+
+export type WorkDataItem = {
+    id: number;
+    date: string;
+    company: string;
+    specialization: string
     socialLink: string;
     description: string[]
 }

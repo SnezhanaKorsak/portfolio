@@ -159,22 +159,20 @@
     }
 
     .contentInfo {
+      @include flex(row, space-between, flex-start, wrap);
       font-size: 14px;
       margin-bottom: 0;
       padding: 24px 0;
       position: relative;
 
-      .row {
-        @include flex(row, space-between, center, wrap);
+      .sidebar {
+        @include flex(column, space-between, flex-start, wrap);
 
-        @media (max-width: $breakpointSM){
-          @include flex(column, center, flex-start, wrap);
-        }
+        //@media (max-width: $breakpointSM){
+        //  @include flex(column, center, flex-start, wrap);
+        //}
 
         .rowItem {
-          flex: 0 0 50%;
-          max-width: 50%;
-
           @media (max-width: $breakpointSM){
             max-width: 100%;
           }

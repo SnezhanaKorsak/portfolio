@@ -2,16 +2,16 @@ import React from "react";
 import style from "./ProfileContent.module.scss";
 import {educationData} from "./data";
 import {NavLink, Route, Routes} from "react-router-dom";
-import {EducationItem} from "../educationItem/EducationItem";
+import {EducationItem} from "../experienceItem/EducationItem";
 
 
 export const Education = () => {
 
-    const links = [...educationData].reverse().map(time => {
-        return <button key={time.id} className={style.listItem}>
-            <NavLink key={time.id} to={`${time.date}`}
+    const links = [...educationData].reverse().map(item => {
+        return <button key={item.id} className={style.listItem}>
+            <NavLink key={item.id} to={`${item.date}`}
                      className={({ isActive }) => (isActive ? `${style.link} active` : "inactive") }>
-                {time.date}
+                {item.date}
             </NavLink>
         </button>
     })

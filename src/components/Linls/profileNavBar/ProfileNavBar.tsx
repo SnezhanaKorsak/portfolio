@@ -13,7 +13,7 @@ export const ProfileNavBar = () => {
             <NavLink to={"/about/education/01-03.2022"}>
                 Education
             </NavLink>
-            <NavLink to={"/about/works"}>
+            <NavLink to={"/about/works/Internship"}>
                 Works
             </NavLink>
         </div>

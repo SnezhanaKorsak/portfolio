@@ -19,6 +19,10 @@ export const About = () => {
                     learn and develop, and I would like to work in a company with a modern approach to
                     development and a good team.
                 </p>
+                <p>
+                    I would like to find a project job and a team in which I can improve my professional level.<br/>
+                    I am ready to consider your offer!
+                </p>
             </div>
         </>
     );

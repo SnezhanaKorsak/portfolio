@@ -1,12 +1,11 @@
 import React from "react";
-import {DataItem} from "../about/data";
-import style from "./EducationItem.module.scss";
+import {EducationDataItem} from "../about/data";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons/faExternalLinkAlt";
-
+import style from "./Experience.module.scss";
 
 type EducationItemProps = {
-    item: DataItem
+    item: EducationDataItem
 }
 
 export const EducationItem: React.FC<EducationItemProps> = ({item}) => {
