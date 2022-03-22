@@ -15,7 +15,7 @@ function App() {
     return (
         <div className="wrapper">
             <Routes>
-                <Route path="/" element={<StartPage/>}/>
+                <Route path="/portfolio" element={<StartPage/>}/>
                 <Route path={RoutePath.navigation} element={<Navigation/>}/>
 
                 <Route path={RoutePath.about + "/*"} element={<Profile/>}/>

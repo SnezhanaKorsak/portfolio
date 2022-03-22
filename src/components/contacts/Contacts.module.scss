@@ -58,7 +58,8 @@
       }
 
       .description {
-        width: 70%;
+        margin-top: -250px;
+        width: 60%;
         text-align: justify;
 
         @media (max-width: $breakpointMD) {
@@ -137,8 +138,8 @@
 
     .contactsInfo {
       width: 30%;
-      margin-top: 30px;
-      margin-left: 50px;
+      margin-top: -250px;
+      margin-left: 80px;
 
       @media (max-width: $breakpointSM) {
         width: 100%;
@@ -156,6 +157,5 @@
       }
     }
   }
-
 }
 
