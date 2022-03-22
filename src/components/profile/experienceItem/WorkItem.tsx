@@ -16,13 +16,12 @@ export const WorkItem: React.FC<WorkItemProps> = ({item}) => {
         <div className={style.educationContent}>
             <div className={style.title}>
                 {`${item.specialization} @${item.company}`}
+                <p>{item.date}</p>
                 <a href={item.socialLink} target="_blank">
                     <FontAwesomeIcon icon={faExternalLinkAlt} className={style.linkIcon}/>
                 </a>
             </div>
-            {/*<div >
-                {item.}
-            </div>*/}
+
             <div className={style.description}>
                 <ul>
                     {descriptionItems}
