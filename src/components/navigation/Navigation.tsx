@@ -32,7 +32,7 @@ export const Navigation = () => {
             </div>
 
             <div className={style.icon}>
-                <NavLink to={"/"}>
+                <NavLink to={"/portfolio/*"}>
                     <FontAwesomeIcon icon={faHome} size="2x"/>
                 </NavLink>
             </div>
