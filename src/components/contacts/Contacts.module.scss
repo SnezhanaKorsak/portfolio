@@ -1,3 +1,162 @@
 @import "../../sass/variables";
 @import "../../sass/mixins";
+@import "../../common/styles/styles.module";
+
+
+@keyframes rotateWords {
+  0% {
+    opacity: 0;
+    //animation-timing-function: ease-in;
+  }
+  2% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.contactsBlock {
+  @include flex(column, flex-start, stretch, wrap);
+  min-height: 100vh;
+  position: relative;
+
+  .btnBack {
+    @extend .btnBackGeneral
+  }
+
+  .container {
+    @include flex(column, center, center, wrap);
+    width: 85%;
+    height: 65vh;
+    margin: 0 auto;
+    @media (max-width: $breakpointSM) {
+      height: 100%;
+    }
+
+    .contactsContainer {
+      @include flex(row, space-between, center, nowrap);
+
+      @media (max-width: $breakpointSM) {
+        @include flex(column, center, center, nowrap);
+      }
+
+      .description {
+        width: 70%;
+        text-align: justify;
+
+        @media (max-width: $breakpointMD) {
+          width: 60%;
+          margin-left: 30px;
+        }
+
+        @media (max-width: $breakpointSM) {
+          width: 100%;
+          margin: 10px auto 20px;
+        }
+
+        .title {
+          @extend .subtitle;
+          margin-top: -10px;
+          text-align: left;
+        }
+
+        p {
+          @extend .contentDescription;
+          font-size: 22px;
+          line-height: 40px;
+          color: $secondaryColor;
+          @media (max-width: $breakpointSM) {
+            font-size: 16px;
+          }
+
+          &:first-letter {
+            margin-left: 12px;
+          }
+          &:last-child {
+            position: relative;
+            text-align: left;
+
+          }
+        }
+
+        .ruWords {
+          display: inline-block;
+          min-width: 300px;
+          text-indent: 10px;
+          color: $accentColor;
+          font-size: 24px;
+          font-weight: 600;
+
+          @media (max-width: $breakpointSM) {
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+          }
+
+          span {
+            position: absolute;
+            top: 0;
+            left: 110px;
+            opacity: 0;
+            overflow: hidden;
+            animation: rotateWords 12s linear infinite 0s;
+
+            @media (max-width: $breakpointSM) {
+              left: 82px;
+            }
+
+            &:nth-child(2) {
+              animation-delay: 4s;
+            }
+
+            &:nth-child(3) {
+              animation-delay: 8s;
+            }
+          }
+
+        }
+      }
+    }
+
+    .contactsInfo {
+      width: 30%;
+      margin-top: 30px;
+      margin-left: 50px;
+
+      @media (max-width: $breakpointSM) {
+        width: 100%;
+        margin: -40px auto 70px ;
+      }
+    }
+
+    div[class *="mailContainer"] {
+      top: 100px;
+    }
+
+    @media (max-width: $breakpointSM) {
+      div[class *="socialContainer"], div[class *="mailContainer"] {
+        display: none;
+      }
+    }
+  }
+
+}
 

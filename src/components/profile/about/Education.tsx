@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./ProfileContent.module.scss";
-import {educationData} from "./data";
+import {educationData} from "../../../utils/data";
 import {NavLink, Route, Routes} from "react-router-dom";
 import {EducationItem} from "../experienceItem/EducationItem";
 

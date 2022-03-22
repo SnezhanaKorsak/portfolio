@@ -4,7 +4,7 @@ import style from "./MailLinks.module.scss";
 
 export const MailLinks = () => {
     return (
-        <div className={style.container}>
+        <div className={style.mailContainer}>
             <a href="mailto:snezhana.korsak@gmail.com">snezhana.korsak@gmail.com</a>
         </div>
     );

@@ -5,7 +5,7 @@ import style from "./VerticalLinks.module.scss";
 export const VerticalLinks = () => {
 
     return (
-        <div className={style.container}>
+        <div className={style.socialContainer}>
             <ul className={style.social}>
                 <li>
                     <a href="https://github.com/SnezhanaKorsak" target="_blank" aria-label="GitHub">

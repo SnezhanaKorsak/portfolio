@@ -1,6 +1,6 @@
 @import "./variables";
 
-@mixin flex ($direction, $justifyContent, $alignItems, $wrap) {
+@mixin flex($direction, $justifyContent, $alignItems, $wrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justifyContent;
@@ -8,13 +8,13 @@
   flex-wrap: $wrap;
 }
 
-@mixin text ($fontSize, $fontWeight, $letterSpacing) {
+@mixin text($fontSize, $fontWeight, $letterSpacing) {
   font-size: $fontSize;
   font-weight: $fontWeight;
   letter-spacing: $letterSpacing;
 }
 
-@mixin circle ($width, $height) {
+@mixin circle($width, $height) {
   width: $width;
   height: $height;
   border: 1px solid $secondaryColor;

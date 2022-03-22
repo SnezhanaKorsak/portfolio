@@ -86,12 +86,12 @@
         min-height: 200px;
     }
 
-      & p::first-letter {
-        margin-left: 10px;
-      }
 
-      & p {
+       p {
         @extend .contentDescription;
+          &::first-letter {
+           margin-left: 10px;
+         }
       }
 
       .inner {
@@ -167,10 +167,6 @@
 
       .sidebar {
         @include flex(column, space-between, flex-start, wrap);
-
-        //@media (max-width: $breakpointSM){
-        //  @include flex(column, center, flex-start, wrap);
-        //}
 
         .rowItem {
           @media (max-width: $breakpointSM){

@@ -1,4 +1,3 @@
-
 export const educationData: EducationDataItem[] = [
     {
         id: 1,
@@ -125,6 +124,70 @@ export const worksData: WorkDataItem[] = [
 
 ]
 
+export const projectsData: ProjectDataItem[] = [
+    {
+        id: 1,
+        projectName: "Forecast",
+        techList: ["React", "Redux", "Axios", "Leaflet", "Recharts", "Weather API", "SASS"],
+        socialLinks: ["https://github.com/SnezhanaKorsak/forecast", "https://snezhanakorsak.github.io/forecast"],
+        description: "A web application that shows the weather forecast for the week for the selected location. " +
+            "It is possible to provide information in the form of a table, graph or map. Save locations in your " +
+            "favorites list for quick search. The application supports English and Russian languages, and it is also" +
+            " possible to choose a dark or light theme."
+    },
+    {
+        id: 2,
+        projectName: "Todo list",
+        techList: ["React", "Redux", "Axios", "TypeScript", "Material UI", "REST API"],
+        socialLinks: ["https://github.com/SnezhanaKorsak/todolist", "https://snezhanakorsak.github.io/todolist"],
+        description: "It is a list of tasks. You can combine tasks into groups, delete/add new ones, as well as " +
+            "change their names. There is a filter for sorting tasks by the degree of their completion"
+    },
+    {
+        id: 3,
+        projectName: "Survey Website",
+        techList: ["React", "Redux", "Axios", "TypeScript"],
+        socialLinks: ["https://github.com/SnezhanaKorsak/survey-application",
+            "https://snezhanakorsak.github.io/survey-application/"],
+        description: "A simple survey website. All answers are saved and displayed at the end of the test in a separate tab."
+    },
+    {
+        id: 4,
+        projectName: "Social Network",
+        techList: ["React", "Redux", "Axios", "Class Components", "TypeScript"],
+        socialLinks: ["https://github.com/SnezhanaKorsak/network", "https://snezhanakorsak.github.io/network/#/profile/"],
+        description: "This website project is a possible representation of a social network like VKONTAKTE or Facebook." +
+            " The project is in a development project"
+    },
+]
+
+export const contactsData: ContactDataItem[] = [
+    {
+        id: 1,
+        iconName: "faMarker",
+        contactType: "Name",
+        contactValue: "Snezhana Korsak"
+    },
+    {
+        id: 2,
+        iconName: "faMapMarkedAlt",
+        contactType: "Location",
+        contactValue: "Minsk/Belarus"
+    },
+    {
+        id: 3,
+        iconName: "faPhone",
+        contactType: "Call Me",
+        contactValue: "+375(33)6454044"
+    },
+    {
+        id: 4,
+        iconName: "faLocationArrow",
+        contactType: "Email Me",
+        contactValue: "snezhana.korsak@gmail.com"
+    },
+]
+
 //types
 
 export type EducationDataItem = {
@@ -143,4 +206,19 @@ export type WorkDataItem = {
     specialization: string
     socialLink: string;
     description: string[]
+}
+
+export type ProjectDataItem = {
+    id: number;
+    projectName: string;
+    socialLinks: string[];
+    techList: string[];
+    description: string
+}
+
+export type ContactDataItem = {
+    id: number;
+    iconName: string;
+    contactType: string;
+    contactValue: string
 }

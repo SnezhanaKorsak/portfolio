@@ -1,6 +1,6 @@
 import React from "react";
 import {NavLink, Route, Routes} from "react-router-dom";
-import {worksData} from "./data";
+import {worksData} from "../../../utils/data";
 import {WorkItem} from "../experienceItem/WorkItem";
 import style from "./ProfileContent.module.scss";
 

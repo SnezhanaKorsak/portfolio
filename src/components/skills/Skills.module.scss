@@ -1,3 +1,115 @@
 @import "../../sass/variables";
 @import "../../sass/mixins";
+@import "../../common/styles/styles.module";
 
+
+.skillsBlock {
+  @include flex(column, flex-start, stretch, wrap);
+  min-height: 100vh;
+  position: relative;
+
+  .btnBack {
+    @extend .btnBackGeneral
+  }
+
+  .skillsContainer {
+    @include flex(column, space-between, stretch, nowrap);
+    width: 85%;
+    margin: 0 auto;
+
+    .skillsList {
+      @include flex(row, space-between, stretch, wrap);
+      width: 100%;
+      min-height: 350px;
+      margin-top: 40px;
+
+      @media (max-width: 705px) {
+        justify-content: center;
+        margin-bottom: 80px;
+      }
+
+    }
+
+    .skillsDescription {
+      @include flex(row, space-between, center, nowrap);
+      width: 100%;
+
+      @media (max-width: 705px) {
+        @include flex(column, space-between, center, wrap);
+      }
+
+
+      .text {
+        @include text(24px, 400, normal);
+        max-width: 70%;
+        text-align: justify;
+        margin-right: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(255, 255, 255, .08);
+
+        @media (max-width: $breakpointSM) {
+          width: 100%;
+        }
+
+        p {
+          @extend .contentDescription;
+          color: $secondaryColor;
+
+          &:first-letter {
+            margin-left: 15px;
+          }
+        }
+
+        .title {
+          @extend .subtitle;
+          margin-top: -10px;
+
+          &.long {
+            height: 80px;
+
+            @media (max-width: $breakpointSM) {
+              height: 30px;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 1.2;
+              text-align: inherit;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            @media (min-width: $breakpointLG) {
+              height: 40px;
+            }
+          }
+        }
+      }
+
+      .hoursCounter {
+        @include text(66px, 700, 1.2px);
+        @include flex(column, center, center, wrap);
+        width: 30%;
+        margin-top: -55px;
+        color: $grayDark;
+
+        span {
+          display: inline-block;
+          margin: 0 5px 0 10px;
+          width: 150px;
+        }
+
+        .label {
+          @include text(20px, 400, normal);
+          margin-top: -15px;
+          margin-right: 30px;
+          color: $secondaryColor;
+        }
+
+        @media (max-width: $breakpointMD) {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+
+  }
+}

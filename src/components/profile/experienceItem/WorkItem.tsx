@@ -1,5 +1,5 @@
 import React from "react";
-import {WorkDataItem} from "../about/data";
+import {WorkDataItem} from "../../../utils/data";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons/faExternalLinkAlt";
 import style from "./Experience.module.scss";

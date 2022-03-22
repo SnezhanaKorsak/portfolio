@@ -1,3 +1,226 @@
 @import "../../sass/variables";
 @import "../../sass/mixins";
 
+.projectsBlock {
+  @include flex(row, center, stretch, wrap);
+  min-height: 100vh;
+  position: relative;
+
+  .btnBack {
+    position: absolute;
+    bottom: 65px;
+    right: 65px;
+
+    @media (min-width: $breakpointMD) and (max-width: $breakpointLG) {
+      position: fixed;
+      top: 15px;
+      right: 60px;
+    }
+    @media (min-width: $breakpointLG) {
+      position: fixed;
+      right: 70px;
+      top: 15px;
+    }
+  }
+
+  .projectsContainer {
+    width: 85%;
+    margin: 0 auto;
+
+    .feature {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(12, 1fr);
+      -webkit-box-align: center;
+      align-items: center;
+      margin-bottom: 80px;
+
+
+      .projectContent {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        position: relative;
+        grid-area: 1 / 1 / -1 / 7;
+        z-index: 50;
+
+        @media (max-width: $breakpointMD) {
+          @include flex(column, center, sctrech, nowrap);
+          height: 100%;
+          grid-column: 1 / -1;
+          padding: 20px;
+          z-index: 50;
+        }
+
+        .projectOverline {
+          margin: 10px 0 5px;
+          color: $accentColor;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .projectTitle {
+          font-size: 28px;
+          color: $slate;
+          text-transform: uppercase;
+
+          @media (min-width: $breakpointMD) {
+            margin: 0 0 20px;
+          }
+        }
+
+        .projectDescription {
+          box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+          position: relative;
+          z-index: 20;
+          padding: 25px;
+          border-radius: 4px;
+          background-color: rgba(52, 58, 64, 0.8);
+          color: $secondaryColor;
+          font-size: 18px;
+
+          @media (max-width: $breakpointMD) {
+            padding: 20px 0;
+            background-color: transparent;
+            box-shadow: none;
+          }
+        }
+
+        .projectTechList {
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          z-index: 2;
+          margin: 25px 60px 10px 0;
+          padding: 0;
+          list-style: none;
+          @media (max-width: $breakpointMD) {
+            margin: 10px 0;
+          }
+
+
+          li {
+            margin: 0 20px 5px 0;
+            color: $slate;
+            font-size: 16px;
+            white-space: nowrap;
+
+            @media (max-width: $breakpointMD) {
+              margin: 0 10px 5px 0;
+            }
+          }
+        }
+
+        .projectLinks {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-top: 10px;
+          margin-left: -10px;
+
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: $color;
+
+            svg {
+              width: 20px;
+              height: 20px;
+
+              &:hover {
+                color: $accentColor;
+              }
+            }
+
+            &.external svg {
+              width: 22px;
+              height: 22px;
+              margin-top: -2px;
+            }
+          }
+        }
+      }
+
+      .projectImage {
+        grid-area: 1 / 6 / -1 / -1;
+        position: relative;
+        z-index: 1;
+        height: 400px;
+        border-radius: 10px;
+
+        background-position: center;
+        background-size: cover;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        //filter: brightness(70%);
+
+        @media (max-width: $breakpointMD) {
+          grid-column: 1 / -1;
+          opacity: 0.25;
+          height: 500px;
+          //filter: brightness(100%);
+
+        }
+
+        &:hover {
+          filter: brightness(100%);
+          transition: filter 1s ease;
+        }
+      }
+
+      &:nth-child(2n+1) {
+        .projectContent {
+          grid-column: 7 / -1;
+          text-align: right;
+
+          @media (max-width: $breakpointLG) {
+            grid-column: 5 / -1;
+          }
+          @media (max-width: $breakpointMD) {
+            grid-column: 1 / -1;
+            padding: 20px;
+            text-align: left;
+          }
+        }
+
+        .projectImage {
+          grid-column: 1 / 8;
+
+          @media (max-width: $breakpointMD) {
+            grid-column: 1 / -1;
+          }
+        }
+
+        .projectTechList {
+          justify-content: flex-end;
+          margin: 25px 0 10px 60px;
+
+          @media (max-width: $breakpointMD) {
+            justify-content: flex-start;
+          }
+
+          & li {
+            margin: 0 0 5px 20px;
+            @media (max-width: $breakpointMD) {
+              margin: 0 10px 5px 0;
+            }
+          }
+        }
+
+        .projectLinks {
+          justify-content: flex-end;
+          margin-left: 0;
+          margin-right: -10px;
+
+          @media (max-width: $breakpointMD) {
+            justify-content: flex-start;
+            margin-left: -10px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
