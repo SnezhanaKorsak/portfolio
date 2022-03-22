@@ -1,0 +1,88 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../common/styles/styles.module";
+
+@keyframes scan {
+  0% {
+    top: 45px;
+    color: $grayDarkOpacity;
+  }
+
+  50% {
+    top: 650px;
+    color: $accentColor;
+  }
+
+  100% {
+    top: 45px;
+    color: $grayDarkOpacity;
+  }
+}
+@keyframes scannedColor {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 440px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+.container {
+  @include flex(column, center, center, nowrap);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+
+
+  .text404 {
+    @include text(280px, 700, normal);
+    position: relative;
+    color: $grayDarkOpacity;
+    margin-top: -100px;
+    text-align: center;
+
+    @media (max-width: $breakpointSM) {
+      width: 90%;
+      margin: auto;
+      font-size: 140px;
+    }
+
+    .title {
+      @include text(26px, 400, normal);
+      color: $slate;
+    }
+    .description {
+      @include text(18px, 400, normal);
+      color: $slate;
+      margin-top: 20px;
+    }
+  }
+
+
+
+  .btnBack {
+    @extend .btnBackGeneral
+  }
+
+  .line {
+    position: absolute;
+    z-index: 1000;
+    width: 70%;
+    height: 5px;
+    background: $accentColor;
+    box-shadow: 4px 4px 42px 40px rgba(0, 158, 102, 0.29);
+    animation: scan 10s linear infinite;
+
+    @media (max-width: $breakpointSM) {
+      width: 90%;
+    }
+  }
+
+
+}

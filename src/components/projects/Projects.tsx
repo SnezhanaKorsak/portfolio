@@ -8,6 +8,7 @@ import surveyImg from "../../assets/images/survey.jpg"
 import networkImg from "../../assets/images/network.jpg"
 import style from "./Projects.module.scss";
 import {BackButtons} from "../../common/buttons/back-buttons/BackButtons";
+import {Preloader} from "../../common/components/preloader/Preloader";
 
 
 
@@ -26,6 +27,7 @@ export const Projects = () => {
 
     return (
         <div className={style.projectsBlock}>
+            <Preloader show="down"/>
             <Title main={"projects"} secondary={"What I Do?"}/>
             <div className={style.btnBack}>
                 <BackButtons/>

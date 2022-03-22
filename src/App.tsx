@@ -4,7 +4,7 @@ import "./App.scss"
 import {Navigate, Route, Routes} from "react-router-dom";
 import {RoutePath} from "./utils/route-path";
 import {Navigation} from "./components/navigation/Navigation";
-import {NotFoundPage} from "./components/notFoundPage/notFoundPage";
+import {NotFoundPage} from "./components/404/NotFoundPage";
 import {Profile} from "./components/profile/Profile";
 import {Skills} from "./components/skills/Skills";
 import {Projects} from "./components/projects/Projects";
@@ -23,8 +23,8 @@ function App() {
                 <Route path={RoutePath.projects} element={<Projects/>}/>
                 <Route path={RoutePath.contacts} element={<Contacts/>}/>
 
-                {/*<Route path={RoutePath.notFound} element={<NotFoundPage/>}/>
-                <Route path="*" element={<Navigate to={RoutePath.notFound}/>}/>*/}
+                <Route path={RoutePath.notFound} element={<NotFoundPage/>}/>
+                <Route path="*" element={<Navigate to={RoutePath.notFound}/>}/>
             </Routes>
 
         </div>

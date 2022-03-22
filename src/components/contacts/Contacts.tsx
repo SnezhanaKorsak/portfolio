@@ -1,12 +1,12 @@
 import React from "react";
-
-import style from "./Contacts.module.scss";
 import {Title} from "../../common/components/title/Title";
 import {BackButtons} from "../../common/buttons/back-buttons/BackButtons";
 import {VerticalLinks} from "../Linls/verticalLinks/VerticalLinks";
 import {MailLinks} from "../Linls/mailLinks/MailLinks";
 import {ContactItem} from "./contactItem/ContactItem";
+import style from "./Contacts.module.scss";
 import {contactsData} from "../../utils/data";
+import {Preloader} from "../../common/components/preloader/Preloader";
 
 
 export const Contacts = () => {
@@ -15,6 +15,7 @@ export const Contacts = () => {
 
     return (
         <div className={style.contactsBlock}>
+            <Preloader show="down"/>
             <Title main={"contacts"} secondary={"Get in Touch"}/>
 
             <div className={style.btnBack}>

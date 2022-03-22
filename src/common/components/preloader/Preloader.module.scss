@@ -1,0 +1,77 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+@keyframes overlayEffectUp {
+  0% {
+    transform: translateY(100%);
+  }
+  35%, 65% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes overlayEffectDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  35%, 65% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.preloaderUp {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  background-color: #181818;
+  transform: translateY(100%);
+  animation-fill-mode: both;
+  animation: overlayEffectUp 1s ease;
+}
+
+.preloaderDown {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  background-color: #181818;
+  transform: translateY(100%);
+  animation-fill-mode: both;
+  animation: overlayEffectDown 1.5s ease;
+}
+.overlayWrapper{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  opacity: 0;
+  background-color: #101010;
+  animation-name: fadeIn;
+  animation-duration: 0s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+
+}

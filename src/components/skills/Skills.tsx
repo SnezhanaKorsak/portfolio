@@ -12,6 +12,7 @@ import htmlIcon from "../../assets/images/html.svg";
 import sassIcon from "../../assets/images/sass.svg";
 import materialIcon from "../../assets/images/material.svg";
 import githubIcon from "../../assets/images/github.svg";
+import {Preloader} from "../../common/components/preloader/Preloader";
 
 
 export type SkillDataItem = {
@@ -106,6 +107,7 @@ export const Skills = () => {
 
     return (
         <div className={style.skillsBlock}>
+            <Preloader show="down"/>
             <Title main={"my skills"} secondary={"What I Know"}/>
 
             <div className={style.btnBack}>

@@ -4,15 +4,17 @@ import {MailLinks} from "../Linls/mailLinks/MailLinks";
 import {NavLink} from "react-router-dom";
 import {ParticlesBackground} from "../../common/components/ParticlesBackground";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {RoutePath} from "../../utils/route-path";
+import {Preloader} from "../../common/components/preloader/Preloader";
 import {faHome} from "@fortawesome/free-solid-svg-icons/faHome";
 import style from "./Navigation.module.scss";
-import {RoutePath} from "../../utils/route-path";
-
 
 export const Navigation = () => {
 
     return (
         <div className={style.navigationPage}>
+            <Preloader show="up"/>
+
             <ParticlesBackground/>
             <div className={style.circle3}>
                 <div className={style.circle2}>
